@@ -1,0 +1,351 @@
+html{
+    overflow-x: hidden;
+    width: 100vw;
+}
+body{
+    margin: 0;
+    font-family: 'Roboto';
+}
+header{
+    background-color: #1D1D1D;
+    color: #D7B56D;
+    font-family: 'HelveticaNeueCyr';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  }
+header .logo{
+    width: 30%;
+    text-align: right;
+    padding-top: 1vh;
+}
+header nav{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header .contacts{
+    width: 30%;
+}
+header .contacts a{
+    color: #D7B56D;
+    font-size: 12px;
+}
+header .contacts .number{
+    margin: 0;
+    font-size: 20px;
+}
+header nav a{
+    color: #FFF;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s;
+}
+header .logo img{
+    height: 60px;
+    width: 264px;
+}
+header nav a:hover{
+    text-decoration: underline;
+    color: #D7B56D;
+}
+header nav a::after{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #D7B56D;
+    left: 40%;
+    top: 20px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+header a:hover::after{
+    opacity: 1;
+}
+
+
+/* Welcome page */
+.panel-switch img{
+    height: 55px;
+    width: auto;
+}
+.panel-switch{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.welcome-page{
+    background-image: url(media/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+h1{
+    color: white;
+    font-size: 64px;
+    width: 60%;
+}
+.panel-switch .text{
+    width: 50%;
+    margin: 0 10% 0 10%;
+}
+.btn-request{
+    width: 261px;
+    height: 57px;
+    box-shadow: 7px 7px 0 2px orange;
+}
+.scroll{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 11%;
+    top: 75vh;
+}
+.line1, .line2, .line3{
+    height: 2px;
+    width: 3.3vw;
+    background-color: #FFF;
+}
+.line1{
+    background-color: gray;
+}
+.arrow-down{
+    position: absolute;
+    top: 80vh;
+}
+/* Welcome page */
+
+
+
+/* Techno-wood в цифрах */
+.numbers-div-container{
+    display: flex;
+    justify-content: center;
+}
+.numbers-div{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.numbers-div .container{
+    width: 10vw;
+}
+.line{
+    width: 12vw;
+    height: 0.5vh;
+    background-color: #D7B56D;
+}
+.numbers-div .nums{
+    font-size: 4rem;
+    margin: 0;
+    text-align: center;
+    font-weight: 800;
+}
+.numbers-div .text{
+    font-size: 1rem;
+    text-align: center;
+}
+.metric{
+    font-size: 2rem;
+}
+.heading{
+    position: relative;
+    left: 20%;
+    font-size: 2rem;
+}
+
+
+
+
+
+/* Принципы нашей работы */
+.principies-container{
+    background-color: #1D1D1D;
+    color: #FFF;
+}
+.principies{
+    padding: 3% 0 3% 0;
+}
+.principies .content{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+.principies .container{
+    display: flex;
+    justify-content: center;
+}
+.heading2{
+    position: relative;
+    left: 20%;
+    font-size: 2rem;
+}
+.yellow-border{
+    width: 30vw;
+    height: 20vh;
+    border: 2px #D7B56D;
+}
+.principies img{
+    width: 17vw;
+}
+.principies .images{
+    display: grid;
+    grid-template-areas: 
+    "coats fireplace"
+    "restroom fireplace";
+    gap: 5%;
+}
+.coats{
+    grid-area: coats;
+}
+.restroom{
+    grid-area: restroom;
+}
+.fireplace{
+    grid-area: fireplace;
+}
+.principies .gray-line{
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+    opacity: 0.5;
+}
+.principies .number{
+    opacity: 0.5;
+    margin-top: 0;
+}
+.principies .principies-text{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+
+
+/* Изготовление */
+.making{
+    display: flex;
+    justify-content: center;
+    background-color: #F4F3E4;
+    padding: 7% 0 7% 0; 
+}
+.making-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.making-content{
+    display: grid;
+    grid-template-columns: 20% 20% 30% 30%;
+    grid-template-rows: repeat(5, 20vh);
+    grid-template-areas:
+    "individual individual text-container text-container"
+    "contracts contracts contain kitchen"
+    "contracts contracts contain soft"
+    "office guest kids kids"
+    "medicine medicine exhibition exhibition";
+
+    width: 60%;
+    gap: 1%;
+    margin-top: 4vh;
+}
+.black-line{
+    width: 55%;
+    background-color: #1D1D1D;
+    height: 2px;
+}
+.making-content .individual{
+    font-size: 2rem;
+    margin-top: 0;
+}
+.overlay{
+    background-color: #1D1D1DB2;
+    position: relative;
+    top: -7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 6.5vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+.overlay a{
+    color: #D7B56D;
+    font-size: 0.7rem;
+}
+.overlay .name{
+    color: white;
+    font-size: 0.9rem;
+    margin: 0;
+}
+.overlay a::after{
+    content: "→";
+    color: orange;
+    font-size: 1em;
+    margin-left: 5px;
+    transition: 0.2s ease-in-out;
+}
+.overlay a:hover::after {
+    transform: translateX(3px);
+}
+
+/* Как мы производим мебель */
+.how-container{
+    display: flex;
+    justify-content: center;
+}
+.how{
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    padding-top: 4vh;
+}
+.how-heading{
+    font-size: 2rem;
+    width: 30%;
+    margin: 0;
+}
+.how-text{
+    width: 60%;
+}
+.how .line{
+    width: 60%;
+}
+.video{
+    background-image: url(media/ceh.png);
+    background-size: cover;
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.video .text{
+    color: #FFF;
+    max-width: 25%;
+    text-align: center;
+}
+.video img{
+    width: 6vw;
+}
+.video-container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2vh;
+}
